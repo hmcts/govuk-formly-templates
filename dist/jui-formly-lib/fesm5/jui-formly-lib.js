@@ -120,7 +120,6 @@ var JuiFormlyLibModule = /** @class */ (function () {
                     imports: [
                         CommonModule,
                         ReactiveFormsModule,
-                        FormlyModule,
                         FormlyModule.forRoot({
                             types: [
                                 { name: 'input', component: FormlyFieldInput },

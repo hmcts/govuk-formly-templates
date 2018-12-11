@@ -19,7 +19,6 @@ import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormlyModule,
     FormlyModule.forRoot({
       types: [
         { name: 'input', component: FormlyFieldInput },

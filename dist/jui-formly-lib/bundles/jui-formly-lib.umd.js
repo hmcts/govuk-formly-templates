@@ -149,7 +149,6 @@
                         imports: [
                             common.CommonModule,
                             forms.ReactiveFormsModule,
-                            core.FormlyModule,
                             core.FormlyModule.forRoot({
                                 types: [
                                     { name: 'input', component: FormlyFieldInput },
