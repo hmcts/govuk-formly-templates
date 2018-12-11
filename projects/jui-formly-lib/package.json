@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
-    "@angular/core": "^7.0.0"
+    "@angular/core": "^7.0.0",
+    "@angular/forms": "~7.0.0",
+    "@ngx-formly/core": "^4.8.2",
+    "govuk-frontend": "^2.4.0"
   }
 }
