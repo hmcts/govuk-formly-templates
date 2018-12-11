@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "jui-formly-lib": [
+        "dist/jui-formly-lib"
+      ],
+      "jui-formly-lib/*": [
+        "dist/jui-formly-lib/*"
+      ]
+    }
   }
 }

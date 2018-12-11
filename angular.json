@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "jui-formly-lib": {
+      "root": "projects/jui-formly-lib",
+      "sourceRoot": "projects/jui-formly-lib/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/jui-formly-lib/tsconfig.lib.json",
+            "project": "projects/jui-formly-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jui-formly-lib/src/test.ts",
+            "tsConfig": "projects/jui-formly-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/jui-formly-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/jui-formly-lib/tsconfig.lib.json",
+              "projects/jui-formly-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jui-formly"
