@@ -116,6 +116,52 @@ FormlyFieldCheckbox.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+class FormlyFieldRadio extends FieldType {
+}
+FormlyFieldRadio.decorators = [
+    { type: Component, args: [{
+                selector: 'formly-field-radio',
+                template: `
+    <div class="govuk-form-group">
+      <div class="govuk-radios" *ngFor="let option of to.options">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input"
+                 type="radio"
+                 [value]="option.value"
+                 [formControl]="formControl"
+                 [formlyAttributes]="field">
+          <label class="govuk-label govuk-radios__label">
+            {{option.label}}
+          </label>
+        </div>
+      </div>
+    </div>`
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+class FormlyFieldTextarea extends FieldType {
+}
+FormlyFieldTextarea.decorators = [
+    { type: Component, args: [{
+                selector: 'formly-field-textarea',
+                template: `
+    <textarea class="govuk-textarea"
+              [cols]="to.cols"
+              [rows]="to.rows"
+              [formControl]="formControl"
+              [formlyAttributes]="field">
+  </textarea>`
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 class JuiFormlyLibModule {
 }
 JuiFormlyLibModule.decorators = [
@@ -124,7 +170,9 @@ JuiFormlyLibModule.decorators = [
                     JuiFormlyLibComponent,
                     FormlyFieldInput,
                     FormlyFieldSelect,
-                    FormlyFieldCheckbox
+                    FormlyFieldCheckbox,
+                    FormlyFieldRadio,
+                    FormlyFieldTextarea
                 ],
                 imports: [
                     CommonModule,
@@ -134,6 +182,8 @@ JuiFormlyLibModule.decorators = [
                             { name: 'input', component: FormlyFieldInput },
                             { name: 'select', component: FormlyFieldSelect },
                             { name: 'checkbox', component: FormlyFieldCheckbox },
+                            { name: 'radio', component: FormlyFieldRadio },
+                            { name: 'textarea', component: FormlyFieldTextarea },
                         ]
                     })
                 ],
@@ -141,7 +191,9 @@ JuiFormlyLibModule.decorators = [
                     JuiFormlyLibComponent,
                     FormlyFieldInput,
                     FormlyFieldSelect,
-                    FormlyFieldCheckbox
+                    FormlyFieldCheckbox,
+                    FormlyFieldRadio,
+                    FormlyFieldTextarea
                 ]
             },] }
 ];
@@ -156,6 +208,6 @@ JuiFormlyLibModule.decorators = [
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { JuiFormlyLibService, JuiFormlyLibComponent, JuiFormlyLibModule, FormlyFieldInput, FormlyFieldSelect, FormlyFieldCheckbox };
+export { JuiFormlyLibService, JuiFormlyLibComponent, JuiFormlyLibModule, FormlyFieldInput, FormlyFieldSelect, FormlyFieldCheckbox, FormlyFieldRadio as ɵa, FormlyFieldTextarea as ɵb };
 
 //# sourceMappingURL=jui-formly-lib.js.map

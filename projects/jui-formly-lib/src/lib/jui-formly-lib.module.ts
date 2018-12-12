@@ -8,13 +8,17 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldInput } from './components/formly-field-input';
 import { FormlyFieldSelect } from './components/formly-field-select';
 import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
+import { FormlyFieldRadio } from './components/formly-field-radio';
+import { FormlyFieldTextarea } from './components/formly-field-textarea';
 
 @NgModule({
   declarations: [
     JuiFormlyLibComponent,
     FormlyFieldInput,
     FormlyFieldSelect,
-    FormlyFieldCheckbox
+    FormlyFieldCheckbox,
+    FormlyFieldRadio,
+    FormlyFieldTextarea
   ],
   imports: [
     CommonModule,
@@ -24,6 +28,8 @@ import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
         { name: 'input', component: FormlyFieldInput },
         { name: 'select', component: FormlyFieldSelect },
         { name: 'checkbox', component: FormlyFieldCheckbox },
+        { name: 'radio', component: FormlyFieldRadio },
+        { name: 'textarea', component: FormlyFieldTextarea },
       ]
     })
   ],
@@ -31,7 +37,9 @@ import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
     JuiFormlyLibComponent,
     FormlyFieldInput,
     FormlyFieldSelect,
-    FormlyFieldCheckbox
+    FormlyFieldCheckbox,
+    FormlyFieldRadio,
+    FormlyFieldTextarea
   ]
 })
 export class JuiFormlyLibModule { }

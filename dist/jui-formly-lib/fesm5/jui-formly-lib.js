@@ -106,6 +106,42 @@ var FormlyFieldCheckbox = /** @class */ (function (_super) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+var FormlyFieldRadio = /** @class */ (function (_super) {
+    __extends(FormlyFieldRadio, _super);
+    function FormlyFieldRadio() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    FormlyFieldRadio.decorators = [
+        { type: Component, args: [{
+                    selector: 'formly-field-radio',
+                    template: "\n    <div class=\"govuk-form-group\">\n      <div class=\"govuk-radios\" *ngFor=\"let option of to.options\">\n        <div class=\"govuk-radios__item\">\n          <input class=\"govuk-radios__input\"\n                 type=\"radio\"\n                 [value]=\"option.value\"\n                 [formControl]=\"formControl\"\n                 [formlyAttributes]=\"field\">\n          <label class=\"govuk-label govuk-radios__label\">\n            {{option.label}}\n          </label>\n        </div>\n      </div>\n    </div>"
+                }] }
+    ];
+    return FormlyFieldRadio;
+}(FieldType));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var FormlyFieldTextarea = /** @class */ (function (_super) {
+    __extends(FormlyFieldTextarea, _super);
+    function FormlyFieldTextarea() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    FormlyFieldTextarea.decorators = [
+        { type: Component, args: [{
+                    selector: 'formly-field-textarea',
+                    template: "\n    <textarea class=\"govuk-textarea\"\n              [cols]=\"to.cols\"\n              [rows]=\"to.rows\"\n              [formControl]=\"formControl\"\n              [formlyAttributes]=\"field\">\n  </textarea>"
+                }] }
+    ];
+    return FormlyFieldTextarea;
+}(FieldType));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 var JuiFormlyLibModule = /** @class */ (function () {
     function JuiFormlyLibModule() {
     }
@@ -115,7 +151,9 @@ var JuiFormlyLibModule = /** @class */ (function () {
                         JuiFormlyLibComponent,
                         FormlyFieldInput,
                         FormlyFieldSelect,
-                        FormlyFieldCheckbox
+                        FormlyFieldCheckbox,
+                        FormlyFieldRadio,
+                        FormlyFieldTextarea
                     ],
                     imports: [
                         CommonModule,
@@ -125,6 +163,8 @@ var JuiFormlyLibModule = /** @class */ (function () {
                                 { name: 'input', component: FormlyFieldInput },
                                 { name: 'select', component: FormlyFieldSelect },
                                 { name: 'checkbox', component: FormlyFieldCheckbox },
+                                { name: 'radio', component: FormlyFieldRadio },
+                                { name: 'textarea', component: FormlyFieldTextarea },
                             ]
                         })
                     ],
@@ -132,7 +172,9 @@ var JuiFormlyLibModule = /** @class */ (function () {
                         JuiFormlyLibComponent,
                         FormlyFieldInput,
                         FormlyFieldSelect,
-                        FormlyFieldCheckbox
+                        FormlyFieldCheckbox,
+                        FormlyFieldRadio,
+                        FormlyFieldTextarea
                     ]
                 },] }
     ];
@@ -149,6 +191,6 @@ var JuiFormlyLibModule = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { JuiFormlyLibService, JuiFormlyLibComponent, JuiFormlyLibModule, FormlyFieldInput, FormlyFieldSelect, FormlyFieldCheckbox };
+export { JuiFormlyLibService, JuiFormlyLibComponent, JuiFormlyLibModule, FormlyFieldInput, FormlyFieldSelect, FormlyFieldCheckbox, FormlyFieldRadio as ɵa, FormlyFieldTextarea as ɵb };
 
 //# sourceMappingURL=jui-formly-lib.js.map
