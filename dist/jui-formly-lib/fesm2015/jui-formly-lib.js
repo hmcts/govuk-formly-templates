@@ -54,12 +54,12 @@ FormlyFieldInput.decorators = [
     { type: Component, args: [{
                 selector: 'formly-field-input',
                 template: `
-        <div class="govuk-form-group" style="margin: 2ex 0">
-            <label class="govuk-label" for="sort">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="for">
                 {{to.label}}
                 <span *ngIf="to.required === true">*</span>
             </label>
-            <input class="govuk-input" type="input" [formControl]="formControl" [formlyAttributes]="field">
+            <input class="govuk-input" id="to.id" name="to.name" type="input" [formControl]="formControl" [formlyAttributes]="field">
         </div>`
             }] }
 ];
@@ -74,12 +74,12 @@ FormlyFieldSelect.decorators = [
     { type: Component, args: [{
                 selector: 'formly-field-select',
                 template: `
-        <div class="govuk-form-group" style="margin: 2ex 0">
-            <label class="govuk-label" for="sort">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="for">
                 {{to.label}}
                 <span *ngIf="to.required === true">*</span>
             </label>
-            <select class="govuk-select" id="sort" name="sort" [formControl]="formControl" [formlyAttributes]="field">
+            <select class="govuk-select" id="to.id" name="to.name" [formControl]="formControl" [formlyAttributes]="field">
                 <option *ngIf="to.placeholder" [ngValue]="null">{{ to.placeholder }}</option>
                 <ng-container *ngFor="let option of to.options">
                     <option [ngValue]="option.value" [disabled]="option.disabled">
@@ -102,13 +102,27 @@ FormlyFieldCheckbox.decorators = [
     { type: Component, args: [{
                 selector: 'formly-field-checkbox',
                 template: `
-    <div class="govuk-checkboxes__item" style="margin: 2ex 0">
-        <input class="govuk-checkboxes__input" type="checkbox" [formControl]="formControl" [formlyAttributes]="field">
-        <label class="govuk-label govuk-checkboxes__label" [for]="id">
-          {{ to.label }}
-          <span *ngIf="to.required === true">*</span>
-        </label>
-    </div>`
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              {{to.label}}
+            </h1>
+          </legend>
+          <span id="to.id" class="govuk-hint">
+            {{to.description}}
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item" *ngFor="let option of to.options">
+              <input class="govuk-checkboxes__input" type="checkbox" [formControl]="formControl" [formlyAttributes]="field">
+              <label class="govuk-label govuk-checkboxes__label" [for]="id">
+                {{ option.label }}
+                <span *ngIf="to.required === true">*</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>`
             }] }
 ];
 
@@ -123,18 +137,25 @@ FormlyFieldRadio.decorators = [
                 selector: 'formly-field-radio',
                 template: `
     <div class="govuk-form-group">
-      <div class="govuk-radios" *ngFor="let option of to.options">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input"
-                 type="radio"
-                 [value]="option.value"
-                 [formControl]="formControl"
-                 [formlyAttributes]="field">
-          <label class="govuk-label govuk-radios__label">
-            {{option.label}}
-          </label>
-        </div>
-      </div>
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            {{to.label}}
+          </h1>
+        </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item" *ngFor="let option of to.options">
+              <input class="govuk-radios__input"
+                     type="radio"
+                     [value]="option.value"
+                     [formControl]="formControl"
+                     [formlyAttributes]="field">
+              <label class="govuk-label govuk-radios__label">
+                {{option.label}}
+              </label>
+            </div>
+          </div>
+      </fieldset>
     </div>`
             }] }
 ];
@@ -149,12 +170,21 @@ FormlyFieldTextarea.decorators = [
     { type: Component, args: [{
                 selector: 'formly-field-textarea',
                 template: `
-    <textarea class="govuk-textarea"
-              [cols]="to.cols"
-              [rows]="to.rows"
-              [formControl]="formControl"
-              [formlyAttributes]="field">
-  </textarea>`
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+        {{to.label}}
+      </label>
+      <span id="more-detail-hint" class="govuk-hint">
+        {{to.description}}
+      </span>
+      <textarea class="govuk-textarea"
+                [cols]="to.cols"
+                [rows]="to.rows"
+                [formControl]="formControl"
+                [formlyAttributes]="field">
+      </textarea>
+    </div>
+  `
             }] }
 ];
 
