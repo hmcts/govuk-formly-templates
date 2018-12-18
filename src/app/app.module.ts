@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { JuiFormlyLibModule } from 'jui-formly-lib';
+import {ReactiveFormsModule} from '@angular/forms';
+import {FormlyModule} from '@ngx-formly/core';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { JuiFormlyLibModule } from 'jui-formly-lib';
   ],
   imports: [
     BrowserModule,
-    JuiFormlyLibModule
+    JuiFormlyLibModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
