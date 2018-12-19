@@ -1,0 +1,21 @@
+{
+  "name": "jui-formly-lib",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@ngx-formly/core": "^4.8.2",
+    "govuk-frontend": "^2.4.0"
+  },
+  "main": "bundles/jui-formly-lib.umd.js",
+  "module": "fesm5/jui-formly-lib.js",
+  "es2015": "fesm2015/jui-formly-lib.js",
+  "esm5": "esm5/jui-formly-lib.js",
+  "esm2015": "esm2015/jui-formly-lib.js",
+  "fesm5": "fesm5/jui-formly-lib.js",
+  "fesm2015": "fesm2015/jui-formly-lib.js",
+  "typings": "jui-formly-lib.d.ts",
+  "metadata": "jui-formly-lib.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
