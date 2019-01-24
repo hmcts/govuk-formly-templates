@@ -7,6 +7,7 @@ import { FieldType } from '@ngx-formly/core';
     <div class="govuk-form-group">
       <label class="govuk-label" for="more-detail">
         {{to.label}}
+        <span *ngIf="to.required === true">&#42;</span>
       </label>
       <span id="more-detail-hint" class="govuk-hint">
         {{to.description}}

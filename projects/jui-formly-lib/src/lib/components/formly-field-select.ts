@@ -7,7 +7,7 @@ import { FieldType } from '@ngx-formly/core';
         <div class="govuk-form-group">
             <label class="govuk-label" for="for">
                 {{to.label}}
-                <span *ngIf="to.required === true">*</span>
+                <span *ngIf="to.required === true">&#42;</span>
             </label>
             <select class="govuk-select" id="to.id" name="to.name" [formControl]="formControl" [formlyAttributes]="field">
                 <option *ngIf="to.placeholder" [ngValue]="null">{{ to.placeholder }}</option>

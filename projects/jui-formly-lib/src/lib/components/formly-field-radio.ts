@@ -9,6 +9,7 @@ import { FieldType } from '@ngx-formly/core';
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
             {{to.label}}
+            <span *ngIf="to.required === true">&#42;</span>
           </h1>
         </legend>
         <span id="to.id" class="govuk-hint">
