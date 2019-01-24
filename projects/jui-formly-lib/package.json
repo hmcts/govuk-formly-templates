@@ -1,6 +1,6 @@
 {
   "name": "jui-formly-lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "peerDependencies": {
     "@ngx-formly/core": "^4.8.2",
     "govuk-frontend": "^2.4.0"

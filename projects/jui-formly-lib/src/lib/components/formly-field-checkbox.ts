@@ -16,8 +16,14 @@ import { FieldType } from '@ngx-formly/core';
           </span>
           <div class="govuk-checkboxes">
             <div class="govuk-checkboxes__item" *ngFor="let option of to.options">
-              <input class="govuk-checkboxes__input" type="checkbox" [formControl]="formControl" [formlyAttributes]="field">
-              <label class="govuk-label govuk-checkboxes__label" [for]="id">
+              <input class="govuk-checkboxes__input"
+                     id="option.id"
+                     name="option.label"
+                     type="checkbox"
+                     [formControl]="formControl"
+                     [formlyAttributes]="field"
+                     [value]="option.value">
+              <label class="govuk-label govuk-checkboxes__label" [for]="option.id">
                 {{ option.label }}
                 <span *ngIf="to.required === true">*</span>
               </label>
