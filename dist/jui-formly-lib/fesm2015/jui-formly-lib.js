@@ -57,7 +57,7 @@ FormlyFieldInput.decorators = [
         <div class="govuk-form-group">
             <label class="govuk-label" for="for">
                 {{to.label}}
-                <span *ngIf="to.required === true">*</span>
+                <span *ngIf="to.required === true">&#42;</span>
             </label>
             <input class="govuk-input" id="to.id" name="to.name" type="input" [formControl]="formControl" [formlyAttributes]="field">
         </div>`
@@ -77,7 +77,7 @@ FormlyFieldSelect.decorators = [
         <div class="govuk-form-group">
             <label class="govuk-label" for="for">
                 {{to.label}}
-                <span *ngIf="to.required === true">*</span>
+                <span *ngIf="to.required === true">&#42;</span>
             </label>
             <select class="govuk-select" id="to.id" name="to.name" [formControl]="formControl" [formlyAttributes]="field">
                 <option *ngIf="to.placeholder" [ngValue]="null">{{ to.placeholder }}</option>
@@ -107,6 +107,7 @@ FormlyFieldCheckbox.decorators = [
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
               {{to.label}}
+              <span *ngIf="to.required === true">&#42;</span>
             </h1>
           </legend>
           <span id="to.id" class="govuk-hint">
@@ -123,7 +124,6 @@ FormlyFieldCheckbox.decorators = [
                      [value]="option.value">
               <label class="govuk-label govuk-checkboxes__label" [for]="option.id">
                 {{ option.label }}
-                <span *ngIf="to.required === true">*</span>
               </label>
             </div>
           </div>
@@ -147,6 +147,7 @@ FormlyFieldRadio.decorators = [
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
             {{to.label}}
+            <span *ngIf="to.required === true">&#42;</span>
           </h1>
         </legend>
         <span id="to.id" class="govuk-hint">
@@ -184,6 +185,7 @@ FormlyFieldTextarea.decorators = [
     <div class="govuk-form-group">
       <label class="govuk-label" for="more-detail">
         {{to.label}}
+        <span *ngIf="to.required === true">&#42;</span>
       </label>
       <span id="more-detail-hint" class="govuk-hint">
         {{to.description}}
