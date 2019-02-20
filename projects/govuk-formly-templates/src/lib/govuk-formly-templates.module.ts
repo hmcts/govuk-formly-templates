@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { JuiFormlyLibComponent } from './jui-formly-lib.component';
+import { GovukFormlyTemplatesComponent } from './govuk-formly-templates.component';
 import { CommonModule } from '@angular/common';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,7 +13,7 @@ import { FormlyFieldTextarea } from './components/formly-field-textarea';
 
 @NgModule({
   declarations: [
-    JuiFormlyLibComponent,
+    GovukFormlyTemplatesComponent,
     FormlyFieldInput,
     FormlyFieldSelect,
     FormlyFieldCheckbox,
@@ -34,7 +34,7 @@ import { FormlyFieldTextarea } from './components/formly-field-textarea';
     })
   ],
   exports: [
-    JuiFormlyLibComponent,
+    GovukFormlyTemplatesComponent,
     FormlyFieldInput,
     FormlyFieldSelect,
     FormlyFieldCheckbox,
@@ -42,4 +42,4 @@ import { FormlyFieldTextarea } from './components/formly-field-textarea';
     FormlyFieldTextarea
   ]
 })
-export class JuiFormlyLibModule { }
+export class GovukFormlyTemplatesModule { }
