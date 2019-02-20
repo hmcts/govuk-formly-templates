@@ -1,5 +1,5 @@
 {
-  "name": "jui-formly-lib",
+  "name": "govuk-formly-templates",
   "version": "0.0.3",
   "peerDependencies": {
     "@ngx-formly/core": "^4.8.2",

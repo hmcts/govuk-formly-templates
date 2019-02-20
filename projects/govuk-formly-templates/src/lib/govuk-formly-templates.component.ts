@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'enl-jui-formly-lib',
+  selector: 'enl-govuk-formly-templates',
   template: `
     <p>
-      jui-formly-lib works!
+      govuk-formly-templates works!
     </p>
   `,
   styles: []

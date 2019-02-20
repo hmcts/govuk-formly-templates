@@ -18,11 +18,11 @@
       "dom"
     ],
     "paths": {
-      "jui-formly-lib": [
-        "dist/jui-formly-lib"
+      "govuk-formly-templates": [
+        "dist/govuk-formly-templates"
       ],
-      "jui-formly-lib/*": [
-        "dist/jui-formly-lib/*"
+      "govuk-formly-templates/*": [
+        "dist/govuk-formly-templates/*"
       ]
     }
   }

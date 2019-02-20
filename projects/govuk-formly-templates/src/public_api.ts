@@ -1,5 +1,5 @@
 /*
- * Public API Surface of jui-formly-lib
+ * Public API Surface of govuk-formly-templates
  */
 
 export * from './lib/govuk-formly-templates.service';

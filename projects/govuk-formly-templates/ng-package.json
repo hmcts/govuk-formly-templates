@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/jui-formly-lib",
+  "dest": "../../dist/govuk-formly-templates",
   "lib": {
     "entryFile": "src/public_api.ts"
   }
