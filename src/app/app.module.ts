@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { JuiFormlyLibModule } from 'jui-formly-lib';
+import {ReactiveFormsModule} from '@angular/forms';
+import {FormlyModule} from '@ngx-formly/core';
+import {GovukFormlyTemplatesModule} from '../../projects/govuk-formly-templates/src/lib/govuk-formly-templates.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { JuiFormlyLibModule } from 'jui-formly-lib';
   ],
   imports: [
     BrowserModule,
-    JuiFormlyLibModule
+    GovukFormlyTemplatesModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
