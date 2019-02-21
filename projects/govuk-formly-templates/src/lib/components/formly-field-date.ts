@@ -11,10 +11,10 @@ import { Component } from '@angular/core';
             {{to.label}}
           </h1>
         </legend>
-        <span [id]="to.description-id" class="govuk-hint">
+        <span [id]="to.description" class="govuk-hint">
           {{to.description}}
         </span>
-        <div class="govuk-date-input" [id]="to.id">
+        <div class="govuk-date-input" id="to.id">
           <div class="govuk-date-input__item">
             <div class="govuk-form-group">
               <label class="govuk-label govuk-date-input__label" for="gov-day">
@@ -62,4 +62,6 @@ import { Component } from '@angular/core';
     </div>
   `
 })
-export class FormlyFieldDate extends FieldType {}
+export class FormlyFieldDate extends FieldType {
+
+}
