@@ -8,6 +8,7 @@ import {FormlyFieldConfig} from '@ngx-formly/core';
 })
 export class AppComponent {
   form = new FormGroup({});
+  title = 'govuk-formly-templates';
   model = {};
   fields: FormlyFieldConfig[] = [
     {

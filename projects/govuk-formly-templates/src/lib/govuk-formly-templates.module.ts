@@ -17,7 +17,8 @@ import { FormlyFieldDate } from "./components/formly-field-date";
     FormlyFieldSelect,
     FormlyFieldCheckbox,
     FormlyFieldRadio,
-    FormlyFieldTextarea
+    FormlyFieldTextarea,
+    FormlyFieldDate
   ],
   imports: [
     CommonModule,
