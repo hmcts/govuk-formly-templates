@@ -1,4 +1,4 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormlyModule } from "@ngx-formly/core";
 import { ReactiveFormsModule } from "@angular/forms";

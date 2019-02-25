@@ -6,7 +6,7 @@ import { FieldType } from '@ngx-formly/core';
     template: `
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
               {{ to.label }}
             </h1>
