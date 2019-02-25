@@ -1,34 +1,34 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 sudo: required
 addons:
   chrome: stable
 apt:
   sources:
-    - google-chrome
+  - google-chrome
   packages:
-    - google-chrome-stable
-    - google-chrome-beta
+  - google-chrome-stable
+  - google-chrome-beta
 script:
-  - npm --version
-  - npm install
-  - npm test
-  - npm run package
+- npm --version
+- npm install
+- npm test
+- npm run package
 after_success:
-  - npm run test:codecov-upload
-  - npm run test:coveralls-upload
+- npm run test:codecov-upload
+- npm run test:coveralls-upload
 before_deploy:
-  - cd dist/govuk-formly-templates
+- cd dist/govuk-formly-templates
 deploy:
   provider: npm
   email: jenkins-reform@hmcts.net
   api_key:
-    secure: UrvQez/uI/M45eGJzjPjpVzMi6VM7uttQJsjcioGPEaRd/jxvjd/TkIgPb2gpaquCNUulkvKOGnEj9/pHRAGAEscok+uTQHWZXQdAJOOECgJLMLvjdqu1KEyCZlWFvkXSR0KLHXDJeLcatVbj3mepr/NOFLgezNlvN3XH7flY+mgQnal9gbxcNgS6urQw7g5sSKHfiqgpjUsDmMytlHQ+EhTGWkQYVCFMaZDC7gMOCC+LtUuBkE90NTR71E3JOuj4jrCkSpYTyCOEuKU0qRRHLunXJOzriIF0Oyweau3KEArweDd9qq3NFrsFwXVVBPGJiNJC742985rn1hL2QxDxokeedEgjqAH82lIE1hYvcrg4JilF5uvOoublPeBAJcOIytV+Hf1VAGRmbKdiU2X9fjuGdnH2+IlmHtAT/1dlAu3gk1dLxkQuT9bLgBRkLwdLcbxCaTKwzCcnzFc8Tpq9367GFvHk+hYyWL7aBdESGdarN75CrjYSM5Q+rAWwuKqcXqZPC6B7TcLXJSNehhUPkaX9pRiK+PoPzMBdrTWiSG4jrdgktI4gTclVX5tJrjESeIwXC7yi1lIlKLghr/2ZaVHCOMvlz5j85wQwaDAEv/yD2x+UDM4dr2iy9uL6VAIRHYaOzsIpmQeLr3M7XHoVRrckbeaXORdFoG6iDetQ/I=
+    secure: QCtjQIq8am0Yke4PFpdzvUKmZYJ0jesKtAwJyrr/GBKHO0e/bkH4cTmh27a5SR8Cz1Lr6+5ec4oODzf240AZ12HVQ/0lrG7kNWaE+8IXzNM95uJC5EY8uhiHBEQVeI8VVx9GScjFXk/EVP/SgPox4FFTlPNVaT2TQGXNOK/8JjiQ5vsyArrCUEsOhd4ryks8osONEkO/xV/cpd8SwaILN3OgmIc8pNwkWklFMVVlhI6aYPyIdPYR+00Lsi6ZHkrxamx/YXaGEwjy/aObFCFxVAlLRXpvlJVwiTKfrWxSpW0IEYeYoDF6G/V8Ix4/a+f3xa4DyQ91d7Zk4Ymz7Q6xmPmYx7P1J7c4gJJ1bphg4fvPZzl8VDRdUWdLJkkcdPxWp5XV0+mcX9lCC2Yd5junXYz62B5swy/hYHEtyQjbiBG7d+2lLyTZgG28kK9cH+1+zLHlv1ZD/LZA1+LDt+h0s70VNR/294O9XdFYegBc1Y7QKsTjvOgYb6MWPYNrAwLLxxdGKbNh4WwtKudw/fhW8/gbuY0BHrCZB3hHniCpNXeCfa1DiZyhTjeHuh/D2X9TC8/ITH+KNqpjsDdyFi8I3p9m2ERzV8PVw9xxLlesQ+nbR8pMsTqTBnIBdJwIoPNAr2I7BFxWsnUrfylcImyG1KfLHdzwGZ31MYYCg11/ZUU=
   skip_cleanup: true
   on:
     tags: true
