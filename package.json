@@ -1,6 +1,6 @@
 {
   "name": "@hmcts/govuk-formly-templates",
-  "version": "0.1.4-RC",
+  "version": "0.1.5-RC",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
