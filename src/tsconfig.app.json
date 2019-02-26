@@ -2,7 +2,15 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "govuk-formly-templates": [
+        "dist/govuk-formly-templates"
+      ],
+      "rpa-dg-docassembly-webcomponent/*": [
+        "dist/govuk-formly-templates/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",
