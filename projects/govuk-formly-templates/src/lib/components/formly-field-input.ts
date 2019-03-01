@@ -9,7 +9,12 @@ import { FieldType } from '@ngx-formly/core';
                 {{to.label}}
                 <span *ngIf="to.required === true">*</span>
             </label>
-            <input class="govuk-input" id="to.id" name="to.name" type="input" [formControl]="formControl" [formlyAttributes]="field">
+            <input class="govuk-input"
+                   id="to.id"
+                   name="to.name"
+                   type="input"
+                   [formControl]="formControl"
+                   [formlyAttributes]="field">
         </div>`,
 })
 export class FormlyFieldInput extends FieldType {}

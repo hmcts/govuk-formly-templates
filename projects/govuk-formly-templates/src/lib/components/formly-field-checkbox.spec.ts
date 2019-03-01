@@ -50,8 +50,7 @@ export class TestComponent {
       'key': 'exampleCheckbox',
       'type': 'checkbox',
       'templateOptions': {
-        'label': 'Tick all that apply',
-        'options': [{ name: 'example-checkbox-1', value: 'option-1', label: 'Option 1'}]
+        'label': 'example-checkbox'
       }
     }
   ];

@@ -37,16 +37,17 @@ export class AppComponent {
       'fieldArray': null
     },
     {
-      'key': 'exampleCheckbox',
+      'key': 'exampleCheckbox1',
       'type': 'checkbox',
       'templateOptions': {
-        'label': 'Tick all that apply',
-        'options': [
-          { name: 'example-checkbox-1', value: 'option-1', label: 'Option 1'},
-          { name: 'example-checkbox-2', value: 'option-2', label: 'Option 2'},
-          { name: 'example-checkbox-3', value: 'option-3', label: 'Option 3'},
-          { name: 'example-checkbox-4', value: 'option-4', label: 'Option 4'}
-        ]
+        'label': 'Example checkbox option 1'
+      }
+    },
+    {
+      'key': 'exampleCheckbox2',
+      'type': 'checkbox',
+      'templateOptions': {
+        'label': 'Example checkbox option 2'
       }
     },
     {
