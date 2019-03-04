@@ -9,7 +9,11 @@ import { FieldType } from '@ngx-formly/core';
                 {{to.label}}
                 <span *ngIf="to.required === true">*</span>
             </label>
-            <select class="govuk-select" id="to.id" name="to.name" [formControl]="formControl" [formlyAttributes]="field">
+            <select class="govuk-select"
+                    [id]="key"
+                    [name]="key"
+                    [formControl]="formControl"
+                    [formlyAttributes]="field">
                 <option *ngIf="to.placeholder" [ngValue]="null">{{ to.placeholder }}</option>
                 <ng-container *ngFor="let option of to.options">
                     <option [ngValue]="option.value" [disabled]="option.disabled">

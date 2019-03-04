@@ -28,7 +28,7 @@ describe('TextArea FormlyField test', () => {
     fixture.detectChanges();
   }));
 
-  fit('should create the textarea field', async(() => {
+  it('should create the textarea field', async(() => {
     expect(textareaFieldForm.querySelector('formly-field-textarea')).toBeTruthy();
   }));
 });

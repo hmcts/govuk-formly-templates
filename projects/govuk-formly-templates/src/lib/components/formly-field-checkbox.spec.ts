@@ -28,7 +28,7 @@ describe('Checkbox FormlyField test', () => {
     fixture.detectChanges();
   }));
 
-  fit('should create the checkbox field', async(() => {
+  it('should create the checkbox field', async(() => {
     expect(checkboxFieldForm.querySelector('formly-field-checkbox')).toBeTruthy();
   }));
 });

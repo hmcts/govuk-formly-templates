@@ -28,7 +28,7 @@ describe('TextInput FormlyField test', () => {
     fixture.detectChanges();
   }));
 
-  fit('should create the input field', async(() => {
+  it('should create the input field', async(() => {
     expect(inputFieldForm.querySelector('formly-field-input')).toBeTruthy();
   }));
 });

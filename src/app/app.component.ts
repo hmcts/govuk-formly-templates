@@ -9,17 +9,33 @@ import {FormlyFieldConfig} from '@ngx-formly/core';
 export class AppComponent {
   form = new FormGroup({});
   title = 'govuk-formly-templates';
-  model = {};
+  model = {
+    domain: {
+      exampleInput: 'exmaple input text',
+      exampleSelect: 'option-3'
+    },
+    exampleDate: {
+      day: 12, month: 8, year: 2008
+    },
+    exampleCheckbox1: true,
+    exampleRadio: 'option-4',
+    exampleTextArea: 'example text area text'
+  };
+
   fields: FormlyFieldConfig[] = [
     {
-      'key': 'exampleInput',
+      'key': 'domain.exampleInput',
       'type': 'input',
-      'hideExpression': null,
       'templateOptions': {
         'label': 'Example text input',
-        'options': []
       },
-      'fieldArray': null
+    },
+    {
+      'key': 'exampleDate',
+      'type': 'date',
+      'templateOptions': {
+        'label': 'Example date input',
+      }
     },
     {
       'key': 'exampleDate',
@@ -34,7 +50,6 @@ export class AppComponent {
     {
       'key': 'exampleSelect',
       'type': 'select',
-      'hideExpression': null,
       'templateOptions': {
         'label': 'Select the correct option',
         'options': [
@@ -43,8 +58,7 @@ export class AppComponent {
           { value: 'option-3', label: 'Option 3'},
           { value: 'option-4', label: 'Option 4'}
         ]
-      },
-      'fieldArray': null
+      }
     },
     {
       'key': 'exampleCheckbox1',
@@ -63,7 +77,6 @@ export class AppComponent {
     {
       'key': 'exampleRadio',
       'type': 'radio',
-      'hideExpression': null,
       'templateOptions': {
         'label': 'Select one of the options below',
         'options': [
@@ -72,19 +85,16 @@ export class AppComponent {
           { value: 'option-3', label: 'Option 3'},
           { value: 'option-4', label: 'Option 4'}
         ]
-      },
-      'fieldArray': null
+      }
     },
     {
       'key': 'exampleTextArea',
       'type': 'textarea',
-      'hideExpression': null,
       'templateOptions': {
         'label': 'Example text area',
         'cols': 5,
         'rows': 5
-      },
-      'fieldArray': null
+      }
     }
   ];
 

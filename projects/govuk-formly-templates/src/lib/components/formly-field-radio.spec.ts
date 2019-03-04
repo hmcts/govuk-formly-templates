@@ -28,7 +28,7 @@ describe('Radio FormlyField test', () => {
     fixture.detectChanges();
   }));
 
-  fit('should create the radio field', async(() => {
+  it('should create the radio field', async(() => {
     expect(radioFieldForm.querySelector('formly-field-radio')).toBeTruthy();
   }));
 });

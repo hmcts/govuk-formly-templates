@@ -7,8 +7,9 @@ import { FieldType } from '@ngx-formly/core';
       <div class="govuk-form-group">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input"
-                     id="to.id"
-                     name="to.name"
+                     [id]="key"
+                     [name]="key"
+                     [value]="to.value"
                      type="checkbox"
                      [formControl]="formControl"
                      [formlyAttributes]="field">

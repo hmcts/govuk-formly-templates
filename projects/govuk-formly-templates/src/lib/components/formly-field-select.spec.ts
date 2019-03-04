@@ -28,7 +28,7 @@ describe('Select FormlyField test', () => {
     fixture.detectChanges();
   }));
 
-  fit('should create the select field', async(() => {
+  it('should create the select field', async(() => {
     expect(selectFieldForm.querySelector('formly-field-select')).toBeTruthy();
   }));
 });
