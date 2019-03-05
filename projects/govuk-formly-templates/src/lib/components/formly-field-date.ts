@@ -10,8 +10,8 @@ import { FieldType } from '@ngx-formly/core';
         <span *ngIf="to.required === true">*</span>
       </label>
       <input class="govuk-input"
-             id="to.id"
-             name="to.name"
+             [id]="key"
+             [name]="key"
              type="date"
              [formControl]="formControl"
              [formlyAttributes]="field">

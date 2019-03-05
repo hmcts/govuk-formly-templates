@@ -1,6 +1,6 @@
 {
   "name": "govuk-formly-templates",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "An angular component to enable generation of a document based on a predefined template, with placeholders populated using external data and user input",
   "keywords": [
     "Angular",
