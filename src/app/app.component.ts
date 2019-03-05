@@ -22,6 +22,16 @@ export class AppComponent {
       'fieldArray': null
     },
     {
+      'key': 'exampleDate',
+      'type': 'date',
+      'hideExpression': null,
+      'templateOptions': {
+        'label': 'Example datepicker input',
+        'options': []
+      },
+      'fieldArray': null
+    },
+    {
       'key': 'exampleSelect',
       'type': 'select',
       'hideExpression': null,
