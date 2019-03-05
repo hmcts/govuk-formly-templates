@@ -15,6 +15,7 @@ import { FieldType } from '@ngx-formly/core';
             <div class="govuk-radios__item" *ngFor="let option of to.options">
               <input class="govuk-radios__input"
                      type="radio"
+                     [name]="key"
                      [value]="option.value"
                      [formControl]="formControl"
                      [formlyAttributes]="field">
