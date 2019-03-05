@@ -9,7 +9,7 @@ import { FormlyFieldSelect } from './components/formly-field-select';
 import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
 import { FormlyFieldRadio } from './components/formly-field-radio';
 import { FormlyFieldTextarea } from './components/formly-field-textarea';
-import { FormlyFieldDate } from "./components/formly-field-date";
+import { FormlyFieldDate } from './components/formly-field-date';
 
 @NgModule({
   declarations: [
