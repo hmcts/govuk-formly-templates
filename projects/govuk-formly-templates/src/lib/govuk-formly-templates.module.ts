@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 
 import { FormlyFieldInput } from './components/formly-field-input';
@@ -10,6 +10,9 @@ import { FormlyFieldCheckbox } from './components/formly-field-checkbox';
 import { FormlyFieldRadio } from './components/formly-field-radio';
 import { FormlyFieldTextarea } from './components/formly-field-textarea';
 import { FormlyFieldDate } from './components/formly-field-date';
+import { govukDateType } from './components/govuk-date/formly-field-govuk-date';
+import { FormlyFieldGovukDateItem } from './components/govuk-date/formly-field-govuk-date-item';
+import { FormlyFieldGovukDateWrapper } from './components/govuk-date/formly-field-govuk-date-wrapper';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,13 @@ import { FormlyFieldDate } from './components/formly-field-date';
     FormlyFieldCheckbox,
     FormlyFieldRadio,
     FormlyFieldTextarea,
-    FormlyFieldDate
+    FormlyFieldDate,
+    FormlyFieldGovukDateItem,
+    FormlyFieldGovukDateWrapper
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
     FormlyModule.forRoot({
       types: [
@@ -31,7 +37,12 @@ import { FormlyFieldDate } from './components/formly-field-date';
         { name: 'radio', component: FormlyFieldRadio },
         { name: 'textarea', component: FormlyFieldTextarea },
         { name: 'date', component: FormlyFieldDate },
-      ]
+        { name: 'govukdateitem', component: FormlyFieldGovukDateItem },
+        govukDateType,
+      ],
+      wrappers: [
+        { name: 'formly-govuk-date-wrapper', component: FormlyFieldGovukDateWrapper },
+      ],
     })
   ],
   exports: [
@@ -40,7 +51,9 @@ import { FormlyFieldDate } from './components/formly-field-date';
     FormlyFieldCheckbox,
     FormlyFieldRadio,
     FormlyFieldTextarea,
-    FormlyFieldDate
+    FormlyFieldDate,
+    FormlyFieldGovukDateItem,
+    FormlyFieldGovukDateWrapper
   ]
 })
 export class GovukFormlyTemplatesModule { }

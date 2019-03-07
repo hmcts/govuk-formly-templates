@@ -18,3 +18,4 @@ import { FieldType } from '@ngx-formly/core';
     </div>`,
 })
 export class FormlyFieldDate extends FieldType {}
+

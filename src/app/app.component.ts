@@ -31,10 +31,10 @@ export class AppComponent {
       },
     },
     {
-      'key': 'exampleDate',
-      'type': 'date',
+      'key': 'exampleGovukDate',
+      'type': 'govukdate',
       'templateOptions': {
-        'label': 'Example date input',
+        'label': 'Example govuk date input',
       }
     },
     {
