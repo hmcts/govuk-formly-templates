@@ -7,7 +7,7 @@
       "govuk-formly-templates": [
         "dist/govuk-formly-templates"
       ],
-      "rpa-dg-docassembly-webcomponent/*": [
+      "govuk-formly-templates/*": [
         "dist/govuk-formly-templates/*"
       ]
     }
