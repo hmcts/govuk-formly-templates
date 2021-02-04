@@ -30,7 +30,7 @@
     "@ngx-formly/core": "^4.8.2",
     "core-js": "^2.5.4",
     "govuk-frontend": "^2.5.1",
-    "rxjs": "~6.3.3",
+    "rxjs": "~6.6.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
